@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { fetchWeather } from '../actions/index'; 
 
 export default class SearchBar extends Component {
   constructor(props) {
@@ -17,6 +20,8 @@ export default class SearchBar extends Component {
 //keeps form from submitting on enter keypress
   onFormSubmit(event) {
     event.preventDefault();
+
+
   }
 
   render() {
